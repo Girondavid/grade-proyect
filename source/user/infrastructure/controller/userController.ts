@@ -12,7 +12,7 @@ export class userController {
                 user
             });
         } catch (error) {
-            response.json({error})
+            response.status(401).json({error})
         }
     }
 
