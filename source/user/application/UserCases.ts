@@ -1,5 +1,5 @@
-import { userRepository } from "../domain/userRepository";
-import { UserValue } from "../domain/UserValue";
+import { userRepository } from '../domain/userRepository';
+import { UserValue } from '../domain/UserValue';
 
 
 export class UserCase {
@@ -8,14 +8,14 @@ export class UserCase {
 
     public createUser = async ({name, email, password}: {name:string, email:string, password:string}) => {
         const userValue = new UserValue({name, email, password});
-        console.log(userValue)
-        const userCreated = await this.userRepository.registerUser(userValue);
-        return userCreated
-    }
+        console.log(userValue);
+        const userCreated = await this.userRepository.iRegisterUser(userValue);
+        return userCreated;
+    };
 
     public loginUser = async ({email, password}: {email:string, password:string}) => {
-        const sign_inUser = new UserValue({email, password});
-        const sign_User = await this.userRepository.registerUser(sign_inUser);
-        return sign_User;
-    }
+        const signInUser = new UserValue({email, password});
+        const signUser = await this.userRepository.iLoginUser(signInUser);
+        return signUser;
+    };
 }

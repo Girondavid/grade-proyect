@@ -29,10 +29,10 @@ class Server {
     Start() {
         dbInit().then();
         this.app.listen(this.app.get('port'), () => {
-            console.log("server on port ", this.app.get('port'));
+            console.log('server on port ', this.app.get('port'));
         });
     }
 
 }
 const server = new Server();
-export default Server;
+export default server;
