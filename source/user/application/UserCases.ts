@@ -1,13 +1,12 @@
 import { userRepository } from '../domain/userRepository';
 import { UserValue } from '../domain/UserValue';
 
-
 export class UserCase {
 
     constructor(private readonly userRepository:userRepository){}
 
-    public createUser = async ({name, email, password}: {name:string, email:string, password:string}) => {
-        const userValue = new UserValue({name, email, password});
+    public createUser = async ({email, password, name}: {email:string, password:string, name:string}) => {
+        const userValue = new UserValue({email, password, name});
         console.log(userValue);
         const userCreated = await this.userRepository.iRegisterUser(userValue);
         return userCreated;

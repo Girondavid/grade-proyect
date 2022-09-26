@@ -5,27 +5,27 @@ export class userController {
 
     constructor(private UserCase: UserCase) { }
 
-    loginControllerUser = async ({body}: Request, response: Response) => {
+    loginControllerUser = async ({ body }: Request, response: Response) => {
         try {
             const user = await this.UserCase.loginUser(body);
-            response.json({
+            response.status(200).json({
                 user
             });
         } catch (error) {
-            response.status(401).json('Error de controlador');
+            response.status(500).send({error:'something went wrong!', message: error})
         }
+
     };
 
-    registerControllerUser = async ({ body }: Request, response: Response) =>{
+    registerControllerUser = async ({ body }: Request, response: Response) => {
         try {
             const user = await this.UserCase.createUser(body);
-            console.log(body.email);
-            response.json({
+            response.status(200).json({
                 user
             });
         } catch (error) {
-            response.json({error});
-        } 
+            response.status(500).send(error)
+        }
     };
 
 }

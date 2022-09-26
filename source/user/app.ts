@@ -21,7 +21,10 @@ class Server {
         this.app.use(morgan('dev'));
         this.app.use(express.json());
         this.app.use(express.urlencoded({ extended: true }));
-        this.app.use(helmet());
+        this.app.use(helmet.xssFilter());
+        this.app.use(helmet.noSniff());
+        this.app.use(helmet.hidePoweredBy());
+        this.app.use(helmet.frameguard({ action: 'deny' }));
         this.app.use(compression());
         this.app.use(cors());
         this.app.use(Useroute);
