@@ -8,7 +8,7 @@ export class CartController{
     createItemController = async ({body}:Request, response:Response) =>{
         try {
             const Item = this.cartCase.createitem(body);
-            response.status(201).send({
+            response.status(201).json({
                 Item
             }) 
         } catch (error) {
@@ -16,12 +16,12 @@ export class CartController{
         }
     }
 
-    CartItemsController = async (response: Response) => {
+    CartItemsController = async (request: Request, response: Response) => {
         try {
             const AllCartItems = this.cartCase.GetCartItems();
-            response.status(200).send(AllCartItems);
+            response.status(200).json(AllCartItems);
         } catch (error) {
-            response.status(500).send({error:'something went wrong!'})
+            response.send({error:'something went wrong!'}).status(500);
         }
     }
 }
