@@ -3,8 +3,9 @@ import morgan from 'morgan';
 import helmet from 'helmet';
 import compression from 'compression';
 import cors from 'cors';
-import dbInit from './infrastructure/DB/mongo';
-import Useroute from './infrastructure/routes/RouterUser';
+import dbInit from './user/infrastructure/DB/mongo';
+import Useroute from './user/infrastructure/routes/RouterUser';
+import routerCart from './buffet/infrastructure/router/RouterCart';
 
 
 class Server {
@@ -28,6 +29,7 @@ class Server {
         this.app.use(compression());
         this.app.use(cors());
         this.app.use(Useroute);
+        this.app.use(routerCart);
     }
     Start() {
         dbInit().then();

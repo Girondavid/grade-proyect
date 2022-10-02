@@ -22,7 +22,7 @@ const schema = new mongos.Schema({
     },
     password: {
         type: String,
-        minlength: [8, 'La contraseña debe ser al menos de 8'],
+        minlength: [8, 'La contraseña debe ser al menos de 8 caracteres'],
         validate: {
             validator: function (value: string) {
                 return /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/.test(value);

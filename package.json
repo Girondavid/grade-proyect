@@ -22,8 +22,8 @@
     "uuid": "^9.0.0"
   },
   "scripts": {
-    "startup": "tsc && node source/user/app.ts",
-    "dev": "nodemon source/user/app.ts"
+    "startup": "tsc && node source/app.ts",
+    "dev": "nodemon source/app.ts"
   },
   "author": "girondavid",
   "license": "ISC",
