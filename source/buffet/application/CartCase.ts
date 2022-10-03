@@ -13,8 +13,9 @@ export class CartCase{
         return itemCart;
     }
 
-    GetCartItems = async() =>{
+    GetCartItems = async():Promise<CartEntity[]> =>{
         const CartItems:CartEntity[] = await this.CartRepository.iGetCartItems();
+        console.log(CartItems);
         return CartItems;
     }
 }

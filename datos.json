@@ -1,0 +1,16 @@
+[{
+    "category":"arepas",
+    "description":"Arepa amarilla hecha de maíz",
+    "image":"https://drive.google.com/uc?id=1m3157PVe9RFzGiWaCJ8iRGfC0WXisT-N",
+    "title":"Arepa",
+    "price":500.00,
+    "amount":50
+},
+{
+    "category":"huevos",
+    "description":"huevos pericos hechos al vapor",
+    "image":"https://drive.google.com/uc?id=1uo9eHeOV6piui1FZ2ncV2cdgYOCJdJ__",
+    "title":"Huevos Pericos",
+    "price":1500.00,
+    "amount":50
+}]

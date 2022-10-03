@@ -3,7 +3,7 @@ import { CartEntity } from "../../domain/CartEntity";
 import { CartRepository } from "../../domain/CartRepository";
 
 export class MongoCartRepo implements CartRepository{
-    iCreateItem = async (item: CartEntity): Promise<object | null> => {
+    iCreateItem = async (item: CartEntity): Promise<object> => {
         const NewItem = await CartModel.create(item);
         return NewItem;
     }
