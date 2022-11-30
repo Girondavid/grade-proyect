@@ -10,7 +10,6 @@ const schema = new mongos.Schema({
         unique: [true, 'El correo ya existe'],
         required: [true, 'El correo es necesario'],
         maxlength: [100, 'El correo no puede exceder los 100 caracteres'],
-        lowercase: [true, 'el correo debe ser en mayúscula'],
         validate: (value: string) => {
             return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value);
         },

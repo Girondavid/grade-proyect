@@ -7,10 +7,42 @@
     "amount":50
 },
 {
+    "category":"Ostras",
+    "description":"ostras frías en medias conchas o la ostra Rockefeller horneada en un plato buffet redondo",
+    "image":"https://drive.google.com/uc?id=1O1Afv9wZOAqO_xRejhzch9hWLhcDV1-w",
+    "title":"Ostras",
+    "price":21000.00,
+    "amount":50
+},
+{
+    "category":"Lasaña",
+    "description":"Una lasaña de verduras con queso o una variación de pollo y espinacas con una cremosa",
+    "image":"https://drive.google.com/uc?id=1Hc_fXy8V3MdBP1OoVEe2D2frEEQDWyZv",
+    "title":"Lasaña",
+    "price":17000.00,
+    "amount":50
+},
+{
     "category":"huevos",
     "description":"huevos pericos hechos al vapor",
     "image":"https://drive.google.com/uc?id=1uo9eHeOV6piui1FZ2ncV2cdgYOCJdJ__",
     "title":"Huevos Pericos",
     "price":1500.00,
+    "amount":50
+},
+{
+    "category":"Pollo asado",
+    "description":"Pollo al limón asado a la parrilla.",
+    "image":"https://drive.google.com/uc?id=1CthaSmN0EUUCzh6BLMd-VXQ4Re1G1LW8",
+    "title":"Pollo asado",
+    "price":15000.00,
+    "amount":50
+},
+{
+    "category":"Asa ternera ",
+    "description":"Asa ternera al estilo mediterráneo. Esto implica agregar ingredientes como aceitunas Taggiasca, alcaparras y piñones a su asado.",
+    "image":"https://drive.google.com/uc?id=1JSznihkJYV1yi39NpFX-OiL1wQtxWLG1",
+    "title":"Asa ternera ",
+    "price":15000.00,
     "amount":50
 }]
